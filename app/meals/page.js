@@ -1,5 +1,6 @@
 import Link from "next/link";
 import classes from "./page.module.css";
+import MealsGrid from "@/components/meals/meals-grid";
 
 function mealsPage() {
   return (
@@ -14,13 +15,11 @@ function mealsPage() {
           😻
         </p>
         <p className={classes.cta}>
-          <Link href="/meals/share">
-          Share Your Favoritr Recipe
-          </Link>
+          <Link href="/meals/share">Share Your Favoritr Recipe</Link>
         </p>
       </header>
       <main className={classes.main}>
-        
+        <MealsGrid meals={[]} />
       </main>
     </>
   );
